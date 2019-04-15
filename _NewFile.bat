@@ -8,7 +8,7 @@ echo Todo: >> %fn%
 
 if %DayOfWeek% == 5 (
   echo.>> %fn%
-  echo Planview timesheet >> %fn%)
+  echo Submit timesheet >> %fn%)
 
 echo.>> %fn%
 echo.>> %fn%
