@@ -21,7 +21,3 @@ echo.>> %fn%
 
 echo Notes: >> %fn%
 echo.>> %fn%
-echo in  @ >> %fn%
-echo out @ >> %fn%
-echo in  @ >> %fn%
-echo out @ >> %fn%

@@ -54,10 +54,10 @@ void create_todays_todo(std::string& tdy_fn, std::string& yda_fn) {
     outfile << std::endl;
     outfile << "Notes: " << std::endl;
     outfile << std::endl;
-    outfile << "in @" << std::endl;
-    outfile << "out @" << std::endl;
-    outfile << "in @" << std::endl;
-    outfile << "out @" << std::endl;
+    //outfile << "in @" << std::endl;
+    //outfile << "out @" << std::endl;
+    //outfile << "in @" << std::endl;
+    //outfile << "out @" << std::endl;
     outfile.close();
 }
 
