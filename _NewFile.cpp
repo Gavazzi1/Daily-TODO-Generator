@@ -54,10 +54,6 @@ void create_todays_todo(std::string& tdy_fn, std::string& yda_fn) {
     outfile << std::endl;
     outfile << "Notes: " << std::endl;
     outfile << std::endl;
-    //outfile << "in @" << std::endl;
-    //outfile << "out @" << std::endl;
-    //outfile << "in @" << std::endl;
-    //outfile << "out @" << std::endl;
     outfile.close();
 }
 
@@ -74,11 +70,7 @@ int main() {
     // Don't need to worry about underflow because mktime does that automatically
     int weekday = loctm->tm_wday; // days since Sunday. Mon=1 Fri=5
     tm *last_workday = localtime(&now);
-    if (weekday > 1) {
-        last_workday->tm_mday--;
-    } else {
-        last_workday->tm_mday = 5; // on monday, last workday was friday
-    }
+    last_workday->tm_mday--;
 
     // Get the previous workday's todo-file name
     mktime(last_workday);
@@ -86,11 +78,6 @@ int main() {
 
     // Write today's todo file
     create_todays_todo(tdy_fn, yda_fn);
-
-    // Convert to DOS format
-    /*std::string command = "todos ";
-    command.append(fn);
-    system(command.c_str());*/
 
     return 0;
 }
