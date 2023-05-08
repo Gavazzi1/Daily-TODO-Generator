@@ -15,7 +15,7 @@ std::string date_to_fn(tm* in_time) {
     int day = in_time->tm_mday;
 
     char buf[14];
-    sprintf(buf, "%d-%02d-%02d.txt",
+    snprintf(buf, 14, "%d-%02d-%02d.txt",
             year,
             month,
             day);
